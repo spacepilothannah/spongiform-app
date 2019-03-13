@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "url": "http://google.com/search?q=pending",
+    "created_at": "2018-09-12T18:20:30",
+    "updated_at": "2018-09-12T18:20:30",
+    "requested_at": "2018-09-12T18:20:30",
+    "approved_at": null,
+    "rejected_at": null
+  },
+  {
+    "id": 36,
+    "url": "http://google.com/search?q=rejected",
+    "created_at": "2018-09-12T18:20:30",
+    "updated_at": "2018-09-12T18:20:30",
+    "requested_at": "2018-09-12T18:20:30",
+    "approved_at": null,
+    "rejected_at": "2018-09-12T19:20:30"
+  },
+  {
+    "id": 42,
+    "url": "http://google.com/search?q=approved",
+    "created_at": "2018-09-12T18:20:30",
+    "updated_at": "2018-09-12T18:20:30",
+    "requested_at": "2018-09-12T18:20:30",
+    "approved_at": "2018-09-12T19:20:30",
+    "rejected_at": null
+  }
+]

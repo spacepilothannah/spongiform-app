@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:id="@+id/swipe_refresh">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/requests_list"
+        android:name="com.github.spacepilothannah.spongiform.ui.RequestFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:context="com.github.spacepilothannah.spongiform.ui.RequestsFragment"
+        tools:listitem="@layout/requests_list_request" />
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

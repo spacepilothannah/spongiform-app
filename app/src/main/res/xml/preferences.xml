@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:key="spongiform_server"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Server URL"
+        android:inputType="textUri" />
+
+    <EditTextPreference
+        android:defaultValue="admin"
+        android:key="username"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Username" />
+
+    <EditTextPreference
+        android:key="password"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Password"
+        android:inputType="textPassword" android:imeOptions="flagNoExtractUi"/>
+
+</PreferenceScreen>

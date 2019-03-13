@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/pending_menu_item" android:title="Pending" android:checked="true"/>
+        <item android:id="@+id/approved_menu_item" android:title="Approved" />
+        <item android:id="@+id/rejected_menu_item" android:title="Rejected" />
+    </group>
+</menu>

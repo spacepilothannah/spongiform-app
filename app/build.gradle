@@ -1,0 +1,92 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: "de.mannodermaus.android-junit5"
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.github.spacepilothannah.spongiform"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    useLibrary 'android.test.runner'
+
+    useLibrary 'android.test.base'
+    useLibrary 'android.test.mock'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // design dependencies
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.preference:preference:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.drawerlayout:drawerlayout:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+
+    //networking dependencies
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-moshi:2.4.0'
+    implementation 'com.squareup.moshi:moshi'
+    implementation 'com.squareup.moshi:moshi-adapters:1.5.0'
+    implementation 'com.squareup.moshi:moshi-kotlin:1.8.0'
+    androidTestImplementation 'com.squareup.okhttp:mockwebserver:2.4.0'
+
+    // test basics
+    //   junit
+    testImplementation "org.junit.jupiter:junit-jupiter-api:5.3.1"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.3.1"
+
+    //   parameterized tests
+    testImplementation "org.junit.jupiter:junit-jupiter-params:5.3.1"
+
+    //   junit4 support
+    testImplementation "junit:junit:4.12"
+    testRuntimeOnly "org.junit.vintage:junit-vintage-engine:5.3.1"
+    // unit testing with activity lifecycle hoooweeeee
+    testImplementation 'org.robolectric:robolectric:4.1'
+
+    //   android test stuff i guess
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test:rules:1.1.1'
+    androidTestImplementation 'org.mockito:mockito-core:2.23.0'
+    androidTestImplementation 'org.mockito:mockito-android:2.23.0'
+
+
+
+    // test dependencies
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-accessibility:3.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-web:3.1.1'
+    androidTestImplementation 'androidx.test.espresso.idling:idling-concurrent:3.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-idling-resource:3.1.1'
+    androidTestImplementation 'com.21buttons:fragment-test-rule:2.0'
+    debugImplementation 'com.21buttons:fragment-test-rule-extras:2.0'
+}
+
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}

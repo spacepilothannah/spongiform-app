@@ -1,0 +1,17 @@
+<!-- ok this needs to be put in debug because it gets merged into the main apk
+if it was in androidTest it'd get merged into the test apk and resolving the intent
+would fail. Presumably there's a more elegant solution to make sure your debug
+AndroidManifest for using with the actual app doesn't get this added, but I'm
+inexpert and just trying to bash some code together tbh. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.github.spacepilothannah.spongiform"><!--
+    <application>
+        <activity android:name="androidx.fragment.app.FragmentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.ALTERNATIVE" />
+            </intent-filter>
+        </activity>
+    </application>-->
+</manifest>

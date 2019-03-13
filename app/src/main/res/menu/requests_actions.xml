@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_refresh"
+        android:checkable="false"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_refresh_white_24dp"
+        />
+    <item android:id="@+id/filter_pending"
+          android:checkable="true"
+          android:checked="true"
+          android:title="Pending"
+          app:showAsAction="never" />
+    <item android:id="@+id/filter_allowed"
+        android:checkable="true"
+        android:checked="false"
+        android:title="Allowed"
+        app:showAsAction="never" />
+    <item android:id="@+id/filter_denied"
+        android:checked="false"
+        android:checkable="true"
+        android:title="Denied"
+        app:showAsAction="never" />
+</menu>
